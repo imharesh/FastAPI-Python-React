@@ -1,0 +1,81 @@
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background-color);
+  position: fixed; /* This ensures full viewport coverage */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.formWrapper {
+  position: relative;
+  width: 90%;         /* Responsive width */
+  max-width: 380px;   /* Maximum width for larger screens */
+  margin: auto;       /* Center horizontally */
+  transform: translateY(-2%); /* Slight upward shift for visual balance */
+}
+
+.backgroundBox {
+  position: absolute;
+  top: 12px;          /* Adjusted for better shadow effect */
+  left: -8px;
+  right: -8px;
+  bottom: -12px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  z-index: 0;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+.paper {
+  position: relative;
+  width: 100%;
+  background: var(--white);
+  border-radius: 20px;
+  padding: 32px 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  min-height: 450px;  /* Adjusted height */
+  display: flex;      /* Added for content centering */
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Add responsive adjustments */
+@media (max-width: 480px) {
+  .formWrapper {
+    width: 95%;
+    transform: translateY(0);
+  }
+
+  .paper {
+    padding: 24px 16px;
+    min-height: 420px;
+  }
+
+  .backgroundBox {
+    top: 8px;
+    left: -6px;
+    right: -6px;
+    bottom: -8px;
+  }
+}
+
+/* Add height adjustment for smaller screens */
+@media (max-height: 600px) {
+  .container {
+    align-items: flex-start;
+    padding-top: 40px;
+  }
+
+  .paper {
+    min-height: auto;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}

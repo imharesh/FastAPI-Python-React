@@ -1,0 +1,41 @@
+.formContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  width: 100%;
+  max-width: 320px;
+}
+
+.forgotPassword {
+  text-align: right;
+  margin: -10px 0 20px;
+}
+
+.forgotButton {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.forgotButton:hover {
+  color: #000;
+}
+
+.errorMessage {
+  background-color: #ffebee;
+  color: #d32f2f;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+  font-size: 14px;
+}
